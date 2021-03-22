@@ -1,0 +1,12 @@
+.card{
+    background-color:#f97f51;
+    padding:0.5em;
+    margin-bottom:0.5em;
+    border-radius:2px;
+    border: 1px solid #1a1a1a;
+}
+
+.emoji{
+    text-align:center;
+    display: inline-block;
+}
