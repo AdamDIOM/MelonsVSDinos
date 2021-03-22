@@ -17,7 +17,11 @@ export default function Home() {
       ["👨‍🦳", "They have their own squad"],
       ["🍉", "They are yeetful"]
     ])
+const [currentFact, setCurrentFact] = useState("");
 
+function handleChange(event) {
+  setCurrentFact(event.target.value);
+}
     function addFact(type, fact, emoji){
       if(type == "melon"){
 
@@ -32,6 +36,8 @@ export default function Home() {
 
         setDinoFacts(tempFacts)
       }
+
+      setCurrentFact("");
       return true;
     }
   return (
@@ -66,8 +72,19 @@ export default function Home() {
         </Row>
       </Container>
       <Container className={styles.content}>
-        <button onClick={() => {addFact("melon", "Melons grow on cool trees","🌴")}}>set melon state</button>
-        <button onClick={() => {addFact("dino", "they suck","🌴")}}>set dino state</button>
+        <h3>Add a fact</h3>
+        <Row>
+          <Col xs={12} md={8}>
+            <input type="text" value={currentFact} onChange={handleChange} className={styles.form} />
+          </Col>
+          <Col xs={6} md={2}>
+           <button className={styles.button} onClick={() => {addFact("melon", currentFact,"🌴")}}>Add to Melon</button>
+          </Col>
+          <Col xs={6} md={2}>
+                    <button className={styles.button} onClick={() => {addFact("dino", currentFact,"🌴")}}>Add to Dino</button>
+
+          </Col>
+        </Row>
       </Container>
 </article>
     </>

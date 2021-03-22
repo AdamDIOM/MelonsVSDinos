@@ -34,3 +34,22 @@
 .dinoHeader{
   background-image:url("../public/dino.png")
 }
+.form{
+  width:100%;
+  font-size:1.1em;
+  border-radius: 2px;
+  border:1px solid #2a2a2a;
+  padding:0.5em;
+}
+
+
+.button {
+  border-radius:2px;
+  width:100%;
+  font-size:1.1em;
+  padding:0.5em;
+  border:1px solid #2a2a2a;
+  background-color: #b33771;
+font-weight:bold;
+color:white;
+}
