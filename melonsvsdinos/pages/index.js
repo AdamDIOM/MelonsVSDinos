@@ -28,7 +28,7 @@ export default function Home() {
       <Container className={styles.content}>
 
 
-        <Winner winner="melon"></Winner>
+        <Winner winner={dinoFacts.length > melonFacts.length ? "dino" : dinoFacts.length == melonFacts.length ? "draw" : "melon"}></Winner>
         <Row>
           <Col xs={12} md={6}>
             <h2 className={styles.melonHeader}>Melons</h2>
